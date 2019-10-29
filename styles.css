@@ -37,7 +37,6 @@ ul {
 }
 
 .wrapper {
-    /* border: 2px solid yellow; */
     max-width: 1300px;
     margin: 0 auto;
 }
@@ -57,6 +56,12 @@ a {
     overflow: hidden; clip: rect(1px 1px 1px 1px);
     clip: rect(1px, 1px, 1px, 1px); 
     white-space: nowrap;
+}
+
+@media (min-width: 3000px) {
+    .wrapper {
+        max-width: 3000px;
+    }
 }
 
 /* GENERAL STYLE END */
@@ -101,7 +106,6 @@ header {
 }
 
 .navigation i {
-    font-size: 3rem;
     position: absolute;
     right: 15px;
     top: 10px;
@@ -153,6 +157,33 @@ header {
 }
 
 /* HEADLINE MEDIA QUERRY */
+@media (min-width: 4300px) {
+    .headline h1 {
+        font-size: 25rem;
+    }
+
+    .headline h3 {
+        font-size: 8rem;
+    }
+
+    .headline {
+        padding-top: 15%;
+    }
+
+    .social a {
+        font-size: 10rem;
+        padding: 20%;
+    }
+
+    .navigation a {
+        font-size: 8rem;
+    }
+
+    .navigation li {
+        padding-right: calc(100% / 5.3);
+    }
+}
+
 @media (max-width: 950px) {
     .headline h1 {
         width: 50%;
@@ -243,8 +274,46 @@ header {
     transition: 0.4s;
 }
 
-/* ABOUT/BLOG MEDIA QUERRY */
-@media (max-width: 1200px) {
+/* ABOUT/BLOG/CONTACT MEDIA QUERRY */
+@media (min-width: 4300px) {
+    .aboutArticle h2, 
+    .blogArticle h2, 
+    .contactArticle h2, 
+    .gram h2, 
+    .footerUpdate h2, 
+    .footerContact h2 {
+        font-size: 15.6rem;
+    }
+
+    .aboutArticle p, 
+    .blogArticle p, 
+    .contactArticle p,
+    .footerUpdate p,
+    .footerContact li {
+        font-size: 6rem;
+        line-height: 58px;
+    }
+
+    .aboutArticle h3, .blogArticle h3, .contactArticle h3 {
+        font-size: 7.5rem;
+    }
+
+    .aboutArticle h2, .aboutArticle p, .aboutArticle h3 {
+        margin: 4.4% 0;
+    }
+
+    .blogArticle h2, .blogArticle p, .blogArticle h3 {
+        margin-top: 4.4%;
+        margin-bottom: 4.4%;
+    }
+
+    .blogArticle, .aboutArticle {
+        padding-top: 10%;
+        padding-bottom: 8.6%;
+    }
+}
+
+@media (max-width: 1350px) {
     .blogPhoto, .blogArticle, .aboutArticle, .aboutPhoto {
         float: none;
         width: 100%;
@@ -318,7 +387,6 @@ header {
 
 .contactPhoto {
     width: 30%;
-    
 }
 
 .contactArticle, .contactPhoto {
@@ -339,6 +407,16 @@ header {
     margin-top: 7%;
 }
 /* CONTACT MEDIA QUERRY */
+@media (min-width: 4300px) {
+    .contactArticle p {
+        margin-top: 8%;
+    }
+
+    .contactArticle h3 {
+        margin-top: 6%;
+    }
+}
+
 @media (max-width: 1250px) {
     .contactArticle p {
         margin-top: 7%;
@@ -429,7 +507,7 @@ header {
     width: calc(100% / 3);
     font-size: 4rem;
     padding: 15% 0;
-    
+    font-weight: bold;
 }
 
 .icon i {
@@ -437,11 +515,17 @@ header {
     font-size: 6rem;
 }
 
-.icon h3 {
-    font-weight: bold;
+/* ICON MEDIA QUERRY */
+@media (min-width: 4300px) {
+    .icon i {
+        font-size: 18rem;
+    }
+
+    .icon {
+        font-size: 12rem;
+    }
 }
 
-/* ICON MEDIA QUERRY */
 @media (max-width: 800px) {
     .icon {
         float: none;
@@ -519,7 +603,7 @@ footer h3 {
     padding: 1%;
 }
 
-input {
+input, button {
     height: 30px;
     font-size: 2rem;
     padding: 0px;
@@ -532,17 +616,19 @@ input[type="email"] {
 
 button {
     width: 30%;
-    height: 30px;
     color: white;
     background: #9200FF;
     border: #9200FF;
-    height: 30px;
-    font-size: 2rem;
-    padding: 0px;
-    margin: 0px;
 }
 
 /* FOOTER CONTACT/UPDATE MEDIA QUERRY */
+@media (min-width: 4300px) {
+    input, button {
+        height: 90px;
+        font-size: 6rem;
+    }
+}
+
 @media (max-width: 750px) {
     .footerContact, .footerUpdate {
         float: none;
@@ -575,6 +661,12 @@ button {
 }
 
 /* COPYRIGHT MEDIA QUERRY */
+@media (min-width: 4300px) {
+    .copyright {
+        font-size: 6rem;
+    }
+}
+
 @media (max-width: 570px) {
     .copyright {
         font-size: 1.5rem;
