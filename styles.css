@@ -50,6 +50,15 @@ a {
     text-decoration: none;
     color: white;
 }
+
+.labelHide { 
+    position: absolute !important; 
+    height: 1px; width: 1px; 
+    overflow: hidden; clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px); 
+    white-space: nowrap;
+}
+
 /* GENERAL STYLE END */
 
 
@@ -112,7 +121,7 @@ header {
 .headline h1 {
     font-size: 8rem;  
     width: 30%;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 .headline h3 {
@@ -125,7 +134,7 @@ header {
 }
 
 .headline, .headline h1, .headline h3 {
-    transition: 0.2s;
+    transition: 0.4s;
 }
 
 /* NAVIGATION MEDIA QUERRY */
@@ -143,91 +152,46 @@ header {
     }
 }
 
-/* H1 MEDIA QUERRY */
-@media (max-width: 980px) {
+/* HEADLINE MEDIA QUERRY */
+@media (max-width: 950px) {
+    .headline h1 {
+        width: 50%;
+    }
+
     .headline {
         padding-top: 15%;
     }
+}
 
+@media (max-width: 600px) {
     .headline h1 {
+        width: 60%;
         font-size: 7rem;
     }
 
     .headline h3 {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+
+    .headline {
+        padding-top: 30%;
     }
 }
 
-@media (max-width: 840px) {
-    .headline {
-        padding-top: 20%;
-    }
-
+@media (max-width: 440px) {
     .headline h1 {
+        width: 70%;
         font-size: 6rem;
     }
-
-    .headline h3 {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 720px) {
-    .headline {
-        padding-top: 25%;
-    }
-
-    .headline h1 {
-        font-size: 5rem;
-    }
-
     .headline h3 {
         font-size: 2rem;
-        padding: 0.75%;
     }
-}
-
-@media (max-width: 590px) {
+    
     .headline {
-        padding-top: 35%;
-    }
-
-    .headline h1 {
-        font-size: 4rem;
-    }
-
-    .headline h3 {
-        font-size: 1.5rem;
+        padding-top: 40%;
     }
 }
 
-@media (max-width: 480px) {
-    .headline {
-        padding-top: 50%;
-    }
-
-    .headline h1 {
-        font-size: 3rem;
-    }
-
-    .headline h3 {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 370px) {
-    .headline {
-        padding-top: 70%;
-    }
-
-    .headline h1 {
-        font-size: 2.5rem;
-    }
-
-    .headline h3 {
-        font-size: 0.5rem;
-    }
-}
 /* HEADER STYLE END */
 
 
@@ -354,14 +318,17 @@ header {
 
 .contactPhoto {
     width: 30%;
+    
 }
 
 .contactArticle, .contactPhoto {
     float: left;
+    transition: 0.3s;
 }
 
 .contactArticle h2, .contactArticle p, .contactArticle h3 {
     margin-left: 10%;
+    transition: 0.4s;
 }
 
 .contactArticle p {
@@ -370,6 +337,80 @@ header {
 
 .contactArticle h3 {
     margin-top: 7%;
+}
+/* CONTACT MEDIA QUERRY */
+@media (max-width: 1250px) {
+    .contactArticle p {
+        margin-top: 7%;
+    }
+
+    .contactArticle h3 {
+        margin-top: 6%;
+    }
+}
+
+@media (max-width: 1185px) {
+    .contactArticle p {
+        margin-top: 6%;
+    }
+
+    .contactArticle h3 {
+        margin-top: 5%;
+    }
+}
+
+@media (max-width: 1143px) {
+    .contactArticle p {
+        margin-top: 4%;
+    }
+
+    .contactArticle h3 {
+        margin-top: 3%;
+    }
+}
+
+@media (max-width: 1108px) {
+    .contactArticle, .contactPhoto {
+        float: none;
+        width: 100%;
+    }
+
+    .contactPhoto {
+        padding: 10%;
+    }
+
+    .contactArticle h3 {
+        margin-left: 42%;
+        font-size: 2rem;
+    }
+
+    .contactArticle h2 {
+        font-size: 4rem;
+    }
+
+    .contactArticle p {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .contactArticle h3 {
+        margin-left: 38%;
+    }
+
+    .contactPhoto {
+        padding: 15%;
+    }
+
+    .contactArticle p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .contactArticle h3 {
+        margin-left: 30%;
+    }
 }
 
 /* CONTACT STYLE END */
@@ -405,7 +446,6 @@ header {
     .icon {
         float: none;
         width: 100%;
-
     }
 }
 
@@ -502,11 +542,49 @@ button {
     margin: 0px;
 }
 
+/* FOOTER CONTACT/UPDATE MEDIA QUERRY */
+@media (max-width: 750px) {
+    .footerContact, .footerUpdate {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    input[type="email"], footer button {
+        width: 65%;
+    }
+
+    .footerContact h2, .footerUpdate h2 {
+        font-size: 4rem;
+    }
+
+    .footerContact ul, .footerUpdate p, footer button {
+        font-size: 1.5rem;
+    }
+} 
+
 .copyright {
     font-size: 2rem;
+    transition: 0.3s;
 }
 
 .copyright h3 {
     padding: 2.5% 0;
 }
+
+/* COPYRIGHT MEDIA QUERRY */
+@media (max-width: 570px) {
+    .copyright {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .copyright {
+        font-size: 1rem;
+    }
+}
+
 /* FOOTER STYLE END */
